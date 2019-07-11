@@ -8,7 +8,7 @@
 
 命名空间命名规则：以小写字母或数字开头和结尾,包含小写字母,数字,-和\_,不超过16位
 
-命名空间ID 为保证全局唯一性会在用户命名后增加6为随机码
+命名空间ID 为保证全局唯一性会在用户命名后增加6位随机码
 
 ![](http://stepflow-docs.cn-bj.ufileos.com/createnamespace002.png)
 
@@ -82,7 +82,7 @@
 
 类型 选择 STRING
 
-值 填写 ${currentDateTime} 语法： $ + 打括号 + 请求返回参数名
+值 填写 ${currentDateTime} 语法： $ + 大括号 + 请求返回参数名
 
 如：希望输出“星期几”可以根据请求返回值填写 名称：Day 类型：STRING 值 ：${dayOfTheWeek}
 

@@ -4,5 +4,4 @@
 
 **目录：**
 
-![skipfile=/^(middleware:stepflow:concepts)$/ nsort dsort
-msort](/indexmenu\>/middleware/stepflow#1)
+{{indexmenu>:middleware:stepflow#1 | skipfile=/^(middleware:stepflow:concepts)$/ nsort dsort msort}}

@@ -17,7 +17,7 @@
 #### 问：StepFlow的UHttpActivity可以跨可用区调用么？
 
 答：StepFlow目前可使用的集群部署在北京二，但StepFlow是个中间件组件，跨区域的网络能够通信，并不影响用户通过StepFlow的UHttp步骤调用别的区域的产品API。
-![nsort dsort msort](/images/indexmenu\>/middleware/stepflow/FAQ#3)
+
 
 #### 问：保存工作流时报”工作流定义错误”，无法保存成功，该如何处理？
 

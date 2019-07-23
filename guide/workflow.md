@@ -38,6 +38,23 @@
 
 2 运行界面格式为json，前端会对格式进行校验，如不符合json规范则无法执行。
 
+## 导出工作流定义
+
+点击“导出工作流定义”按钮后，会展示具体定义，并能够将当前界面版本的工作流定义进行复制导出。
+
+![](http://stepflow-docs.cn-bj.ufileos.com/export001.png)
+
+![](http://stepflow-docs.cn-bj.ufileos.com/export002.png)
+
+## 导入工作流定义
+
+导入的工作流名称如果在当前namespace下已存在，则为该工作流生成新的版本。如无，即创建了一个全新的工作流。
+
+![](http://stepflow-docs.cn-bj.ufileos.com/import001.png)
+
+![](http://stepflow-docs.cn-bj.ufileos.com/import002.png)
+
+
 ## 切换/发布工作流版本
 
 工作流提供版本管理，发布后的版本为外部调用和进入工作流的默认版本，也可以手动切换版本运行当前版本工作流。

@@ -38,9 +38,8 @@
 
 ## 外部调用workflow
 
-进入workflow编辑页面，根据url地址进行调用
+进入workflow编辑页面，根据url地址进行调用，默认同步模式，如需异步调用避免超时，可在“yourtoken”后增加 &isAsync=true 。
 
-例：
 
 curl -X POST
 '<https://stepflow.ucloud.cn/namespace/namespaceID/workflow/workflowname/version/0?cid=companyid&token=yourtoken>'
@@ -53,5 +52,15 @@ curl -X POST
 }'
 
 备注： yourtoken= token码 companyid=公司id（非邮箱）
+
+例如：
+curl -X POST
+'<https://stepflow.ucloud.cn/namespace/test-abcde/workflow/createservice/version/0?cid=100000&token=abcdefghijklmnopqrst>'
+-H 'Content-Type: application/json; charset=utf-8' -d
+
+'{
+    "User":"root",
+    "Age":12
+}'
 
 ![](http://stepflow-docs.cn-bj.ufileos.com/authorize008.png)

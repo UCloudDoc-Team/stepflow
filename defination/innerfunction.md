@@ -66,5 +66,5 @@ new: string, 替换值
 
 例如： 想将字符串“month=08”中的“08”作为每次工作流调用时候的一个动态值。可以这么写
 
-@func(replace,`month=$month`,`$month`,`${workflow.input.month}`)  将$month作为了一个替换符。
+     @func(replace,`month=$month`,`$month`,`${workflow.input.month}`)  将$month作为了一个替换符。
 

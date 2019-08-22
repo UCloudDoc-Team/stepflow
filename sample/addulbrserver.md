@@ -16,6 +16,26 @@
 
 检测绑定接口是否成功
 
+## 输入输出定义
+
+工作流输入
+| 参数名       | 类型   | 描述                          |
+| ------------ | ------ | ----------------------------- |
+| ULBId        | STRING | ULB ID 如:ulb-xxxx             |
+| VserverId    | STRING | Vserver ID 如:vserver-xxxxx |
+| ListenerPort | INT64  | 监听端口 如:1001               |
+| Region       | STRING | 区域名 如:cn-bj2               |
+| Zone         | STRING | 可用区名 如:cn-bj2-05         |
+
+
+工作流输出
+| 参数名       | 类型   | 描述                          |
+| ------------ | ------ | ----------------------------- |
+| UHostId        | STRING | UHost ID 如：uhost-xxxx           |
+| CreateErrMessage    | STRING | 创建云主机接口错误信息 |
+| GetErrMessage | STRING  | 获取云主机状态接口错误信息               |
+| AllocateErrMessage
+       | STRING | 绑定ULB Vserver错误信息               |
 
 ## 使用方法
 

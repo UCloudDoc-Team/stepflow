@@ -36,8 +36,7 @@
 | UHostId        | STRING | UHost ID 如：uhost-xxxx           |
 | CreateErrMessage    | STRING | 创建云主机接口错误信息 |
 | GetErrMessage | STRING  | 获取云主机状态接口错误信息               |
-| AllocateErrMessage
-       | STRING | 绑定ULB Vserver错误信息               |
+| AllocateErrMessage | STRING | 绑定ULB Vserver错误信息               |
 
 ## 使用方法
 

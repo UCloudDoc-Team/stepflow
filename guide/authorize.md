@@ -55,7 +55,7 @@ curl -X POST
 
 例如：
 curl -X POST
-'<https://stepflow.ucloud.cn/namespace/test-abcde/workflow/createservice/version/0?cid=100000&token=abcdefghijklmnopqrst>'
+'https://stepflow.ucloud.cn/namespace/test-abcde/workflow/createservice/version/0?cid=100000&token=abcdefghijklmnopqrst'
 -H 'Content-Type: application/json; charset=utf-8' -d
 
 '{

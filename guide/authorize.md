@@ -42,7 +42,7 @@
 
 
 curl -X POST
-`'https://stepflow.ucloud.cn/namespace/namespaceID/workflow/workflowname/version/0?cid=companyid&token=yourtoken'`
+'https://stepflow.ucloud.cn/namespace/namespaceID/workflow/workflowname/version/0?cid=companyid&token=yourtoken'
 -H 'Content-Type: application/json; charset=utf-8' -d
 
 '{
@@ -55,7 +55,7 @@ curl -X POST
 
 例如：
 
-curl -X POST  `'https://stepflow.ucloud.cn/namespace/test-abcde/workflow/createservice/version/0?cid=100000&token=abcdefghijklmnopqrst'`
+curl -X POST  'https://stepflow.ucloud.cn/namespace/test-abcde/workflow/createservice/version/0?cid=100000&token=abcdefghijklmnopqrst'
 -H 'Content-Type: application/json; charset=utf-8' -d
 
 '{

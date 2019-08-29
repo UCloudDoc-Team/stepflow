@@ -54,8 +54,7 @@ curl -X POST
 备注： yourtoken= token码 companyid=公司id（非邮箱）
 
 例如：
-curl -X POST
-'https://stepflow.ucloud.cn/namespace/test-abcde/workflow/createservice/version/0?cid=100000&token=abcdefghijklmnopqrst'
+        curl -X POST  'https://stepflow.ucloud.cn/namespace/test-abcde/workflow/createservice/version/0?cid=100000&token=abcdefghijklmnopqrst'
 -H 'Content-Type: application/json; charset=utf-8' -d
 
 '{

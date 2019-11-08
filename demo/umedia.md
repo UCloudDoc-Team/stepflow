@@ -6,7 +6,4 @@
 
 ![视频转码&加水印&截图](http://stepflow-docs.cn-bj.ufileos.com/scenario-umedia.mp4)
 
-<video id="video" controls="" preload="none" poster="http://stepflow-docs.cn-bj.ufileos.com/scenario-umedia.mp4">
-<source id="mp4" src="http://stepflow-docs.cn-bj.ufileos.com/scenario-umedia.mp4" type="video/mp4">
-</video>
 

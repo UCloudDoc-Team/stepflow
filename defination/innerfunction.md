@@ -1,70 +1,67 @@
+# 内置函数 #
 
+工作流提供了内置函数来支持对参数值的一些变换和计算，可以用内置函数来设置参数值，格式如下所示：
+```bash
+@func("strings#concat", "test1", "test2")
+```
+@func()表示这是一个内置函数，其中第一个参数"strings#concat"，strings表示函数所属的类，concat是方法名，"test1"，"test2"表示方法参数，这个函数的结果为"test1test2"。
 
-# 内置函数
+同值运算一样，内置函数还可以和指针进行运算，如下表达式：
+```bash
+@func("strings#concat", "test1", ${a1.output.p1})
+```
+它的结果是字符串"test1"拼接在a1的输出的p1字段的值之前，p1字段的类型必须是string，否则函数会报错。
 
-StepFlow 为方便用户，将一些常用功能包装在了参数定义中。后续会持续将用户需求转化成内置函数。
+内置函数也可以互相嵌套，例如：
+```bash
+@func("strings#concat", "test1", @func("strings#concat", "test1", "test2"))
+```
 
-\======= base64encode ======= 功能：
+## strings ##
+```bash
+@func("strings#concat", "Hello ", "World!") \\ "Hello World!"
+@func("strings#trim", " test ") \\ "test"
+@func("strings#trimLeft", "1test", "1") \\ "test"
+@func("strings#trimRight", "test1", "1") \\ "test"
+@func("strings#replace", "test1", "1", "2") \\ "test2"
+```
 
-将用户的值进行BASE64转码
+## convert ##
+```bash
+@func("convert#int64ToString", 10) \\ "10"
+@func("convert#float64ToString", 10.1234, 2) \\ "10.12" 2 digit precision
+@func("convert#stringToInt64", "10") \\ 10
+@func("convert#stringToFloat64", "10.12") \\ 10.12
+@func("convert#isNull", ${workflow.input.p1.value}) \\ 0 or 1
+@func("convert#isEqual", ${workflow.input.p1.value}, ${workflow.input.p2.value}) \\ 0 or 1
+@func("convert#int64ToFloat64", 1) \\ 1.0
+@func("convert#float64ToInt64", 1.0) \\ 1
+```
 
-使用方式：
+## time ##
+```bash
+@func("time#now", "America/New_York", "2006-01-02 15:04:05") \\ time now  string format like "xxxx-xx-xx xx:xx:xx"
+@func("time#unixNow") \\ unix time
+```
 
-在用户的初入参值的填写中，按以下方式填写参数。
+## encoding ##
+```bash
+@func("encoding#toBase64", "test") \\ "dGVzdA=="
+@func("encoding#fromBase64", "dGVzdA==") \\ "test"
+```
 
-    @func(base64encode, `foo`)
+## array ##
+```bash
+@func("array#append", "STRING", [], "test3") \\ ["test3"]
+${workflow.input.p1.value} \\ ["test1", "test2"]
+@func("array#append", "STRING", ${workflow.input.p1.value}, "test3") \\ ["test1", "test2", "test3"]
+@func("array#len", ${workflow.input.p1.value}) \\ 2
+```
 
-foo表示实参
-
-\======= base64decode =======
-
-功能：
-
-将用户的值进行BASE64解码
-
-使用方式：
-
-在用户的出入参值的填写中，按以下方式填写参数。
-
-    @func(base64decode, `foo`)
-
-foo表示实参
-
-\======= concat =======
-
-功能：
-
-对输入的参数进行拼接, 并返回拼接后的字符串
-
-使用方式：
-
-在用户的出入参值的填写中，按以下方式填写参数。
-
-    @func(concat, [input1], [input2], ...)
-
-input: string|number, 作为输入
-
-output: string, 将所有 \[input\] 拼接后, 返回拼接完成的字符串
-
-\======= replace =======
-
-功能：
-
-字符串替换
-
-使用方式：
-
-在用户的出入参值的填写中，按以下方式填写参数。
-
-    @func(replace, [input], [old], [new])
-
-input: string, 作为输入
-
-old: string, 被替换值
-
-new: string, 替换值
-
-例如： 想将字符串“month=08”中的“08”作为每次工作流调用时候的一个动态值。可以这么写
-
-     @func(replace,`month=$month`,`$month`,`${workflow.input.month}`)  将$month作为了一个替换符。
-
+## number ##
+```bash
+@func("number#neg", 1) \\ -1
+@func("number#plus", 1.0, 1) \\ 2.0
+@func("number#mal", 1.0, 7) \\ 7.0
+@func("number#div", 10, 2) \\ 5
+```

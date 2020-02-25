@@ -4,6 +4,9 @@
 ```bash
 @func("strings#concat", "test1", "test2")
 ```
+如图：
+
+
 @func()表示这是一个内置函数，其中第一个参数"strings#concat"，strings表示函数所属的类，concat是方法名，"test1"，"test2"表示方法参数，这个函数的结果为"test1test2"。
 
 同值运算一样，内置函数还可以和指针进行运算，如下表达式：
@@ -17,7 +20,7 @@
 @func("strings#concat", "test1", @func("strings#concat", "test1", "test2"))
 ```
 
-## strings ##
+## 字符串 ##
 ```bash
 @func("strings#concat", "Hello ", "World!") \\ "Hello World!"
 @func("strings#trim", " test ") \\ "test"
@@ -26,7 +29,7 @@
 @func("strings#replace", "test1", "1", "2") \\ "test2"
 ```
 
-## convert ##
+## 类型转换 ##
 ```bash
 @func("convert#int64ToString", 10) \\ "10"
 @func("convert#float64ToString", 10.1234, 2) \\ "10.12" 2 digit precision
@@ -38,19 +41,19 @@
 @func("convert#float64ToInt64", 1.0) \\ 1
 ```
 
-## time ##
+## 时间 ##
 ```bash
 @func("time#now", "America/New_York", "2006-01-02 15:04:05") \\ time now  string format like "xxxx-xx-xx xx:xx:xx"
 @func("time#unixNow") \\ unix time
 ```
 
-## encoding ##
+## 转码 ##
 ```bash
 @func("encoding#toBase64", "test") \\ "dGVzdA=="
 @func("encoding#fromBase64", "dGVzdA==") \\ "test"
 ```
 
-## array ##
+## 数组 ##
 ```bash
 @func("array#append", "STRING", [], "test3") \\ ["test3"]
 ${workflow.input.p1.value} \\ ["test1", "test2"]
@@ -58,7 +61,7 @@ ${workflow.input.p1.value} \\ ["test1", "test2"]
 @func("array#len", ${workflow.input.p1.value}) \\ 2
 ```
 
-## number ##
+## 数字 ##
 ```bash
 @func("number#neg", 1) \\ -1
 @func("number#plus", 1.0, 1) \\ 2.0

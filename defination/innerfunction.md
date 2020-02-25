@@ -8,9 +8,9 @@
 
 如图：
 
-![](http://stepflow-docs.cn-bj.ufileos.com/import001.png)
+![](http://stepflow-docs.cn-bj.ufileos.com/inner001.png)
 
-![](http://stepflow-docs.cn-bj.ufileos.com/import002.png)
+![](http://stepflow-docs.cn-bj.ufileos.com/inner002.png)
 
 
 @func()表示这是一个内置函数，其中第一个参数"strings#concat"，strings表示函数所属的类，concat是方法名，"test1"，"test2"表示方法参数，这个函数的结果为"test1test2"。

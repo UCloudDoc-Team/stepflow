@@ -1,6 +1,6 @@
-<div class="sidebar_title icon__hela"> 工作流服务 StepFlow</div>
+# 概览
 
-* [概览](/stepflow/README)
+
 * 产品简介
     * [什么是工作流服务](/stepflow/introduction/concept)
     * [产品优势](/stepflow/introduction/advantages)

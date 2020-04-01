@@ -3,7 +3,7 @@
 # 是非逻辑
 
 是非逻辑 BoolDecision在工作流里起到了是非判断的作用。
-
+ 
 ## BoolDecision 示意图
 
 ![](http://stepflow-docs.cn-bj.ufileos.com/bool001.png)

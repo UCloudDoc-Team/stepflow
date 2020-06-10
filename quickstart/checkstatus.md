@@ -87,7 +87,7 @@ ${CreateUHost.output.UHostIds}
 
 同样我们配上检查接口的步骤 ：一个是非逻辑步骤，可以命名为“GetStatusAPIOK”，依然用RetCode作为判断依据。
 
-## 第五步 利用“是非判断”，“等待” 构建循环检查云主机是否创建成功。（StatusRunning，Wait）
+## 第六步 利用“是非判断”，“等待” 构建循环检查云主机是否创建成功。（StatusRunning，Wait）
 
 创建一个“是非判断”命名为 “StatusRunning”用于判断状态是否为“Running”
 
@@ -109,7 +109,7 @@ ${CreateUHost.output.UHostIds}
 
 ![](http://stepflow-docs.cn-bj.ufileos.com/checkstatus010.png)
 
-## 第六步 保存并执行工作流
+## 第七步 保存并执行工作流
 
 ![](http://stepflow-docs.cn-bj.ufileos.com/checkstatus011.png)
 

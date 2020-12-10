@@ -1,4 +1,3 @@
-<div class="sidebar_title icon__hela"> 工作流服务 StepFlow</div>
 
 * [概览](/stepflow/README)
 * 产品简介

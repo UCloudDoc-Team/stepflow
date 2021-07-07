@@ -43,7 +43,7 @@
 根据API
 文档填写必填字段，<https://docs.ucloud.cn/api/uhost-api/create_uhost_instance>
 
-我们选择北京二可用区E 1C1G数据盘
+我们选择华北（北京）可用区E 1C1G数据盘
 
 ![](http://stepflow-docs.cn-bj.ufileos.com/checkstatus003.png)
 
